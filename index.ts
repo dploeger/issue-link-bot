@@ -27,7 +27,7 @@ const issueIdRegExp = new RegExp("(^| )#(?<issueId>[0-9]+)", "g")
 const URLRegExp =
   /\b((?:[a-z][\w-]+:(?:\/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()[\]{};:'".,<>?«»“”‘’]))/i
 
-const keyv = new Keyv(`${keyvUrl}?sslmode=require`)
+const keyv = new Keyv(keyvUrl)
 
 // Bag of commands of this bot
 const commands = [
