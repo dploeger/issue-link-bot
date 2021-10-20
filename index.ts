@@ -109,7 +109,7 @@ client.on("messageCreate", async (message) => {
 
     if (!url) {
       channel.send(
-        "Please set up an issues URL first by using /setUrl <URL>, e.g. /setUrl https://github.com/user/repo/issues"
+        `Please set up an issues URL first by using /setissueurl <URL>, e.g. /setissueurl https://github.com/user/repo/issues/%id`
       )
     } else {
       const matches = message.content.matchAll(issueIdRegExp)
