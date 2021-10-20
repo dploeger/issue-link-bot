@@ -20,7 +20,7 @@ if (!("DATABASE_URL" in process.env)) {
 }
 
 const token = process.env.DISCORD_TOKEN
-const clientId = process.env.DISCORD_TOKEN
+const clientId = process.env.DISCORD_CLIENTID
 const keyvUrl = process.env.DATABASE_URL
 
 const issueIdRegExp = new RegExp("(^| )#(?<issueId>[0-9]+)", "g")
