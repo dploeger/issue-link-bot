@@ -1,4 +1,4 @@
 node_modules
 .idea
 *.js
-*.js.jap
+*.js.map
