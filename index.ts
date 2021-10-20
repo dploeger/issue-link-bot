@@ -14,14 +14,14 @@ if (!("DISCORD_CLIENTID" in process.env)) {
   process.exit(1)
 }
 
-if (!("KEYV_URL" in process.env)) {
-  console.error("Please configure the KEYV_URL environment variable")
+if (!("DATABASE_URL" in process.env)) {
+  console.error("Please configure the DATABASE_URL environment variable")
   process.exit(1)
 }
 
 const token = process.env.DISCORD_TOKEN
 const clientId = process.env.DISCORD_TOKEN
-const keyvUrl = process.env.KEYV_URL
+const keyvUrl = process.env.DATABASE_URL
 
 const issueIdRegExp = new RegExp("(^| )#(?<issueId>[0-9]+)", "g")
 const URLRegExp =
