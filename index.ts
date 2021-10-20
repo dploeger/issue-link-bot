@@ -34,7 +34,7 @@ const commands = [
   new SlashCommandBuilder().setName('setissueurl').setDescription('Sets the issue URL')
     .addStringOption(option =>
       option.setName('url')
-        .setDescription('The issue URL')
+        .setDescription('The issue URL. Use %id as a placeholder for the issue id')
         .setRequired(true)
     ),
 ]
@@ -115,7 +115,7 @@ client.on("messageCreate", async (message) => {
       const matches = message.content.matchAll(issueIdRegExp)
       if (matches) {
         for (const match of matches) {
-          channel.send(`${url}/${match.groups["issueId"]}`)
+          channel.send(url.replace('%id', match.groups["issueId"]))
         }
       }
     }
