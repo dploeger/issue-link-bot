@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "moduleResolution": "Node",
+        "downlevelIteration": true,
+        "target": "ES2021"
+    },
+    "include": ["*.ts"],
+    "exclude": ["node_modules", "**/*.spec.ts"]
+}
